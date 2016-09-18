@@ -1,7 +1,7 @@
 version: '2'
 services:
     httpd:
-        image: php-fpm
+        image: enesgur/php-fpm:latest
         ports:
           - 80:80
           - 443:443
