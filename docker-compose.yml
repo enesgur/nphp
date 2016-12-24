@@ -1,7 +1,8 @@
 version: '2'
 services:
     httpd:
-        image: enesgur/php-fpm:latest
+        image: enesgur/php-fpm:7.0
+        container_name: web-server
         ports:
           - 80:80
           - 443:443
@@ -11,6 +12,6 @@ services:
           - ./nginx/sites:/etc/nginx/sites-enabled
           - ./nginx/sites:/etc/nginx/sites-available
           - ./webroot:/var/www/html
-          - ./php/php-fpm.ini:/etc/php5/fpm/php.ini
-          - ./php/php-fpm.conf:/etc/php5/fpm/php-fpm.conf
+          - ./php/php-fpm.ini:/etc/php/7.0/fpm/php.ini
+          - ./php/php-fpm.conf:/etc/php/7.0/fpm/php-fpm.conf
         tty: true
