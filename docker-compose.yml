@@ -1,7 +1,7 @@
 version: '2'
 services:
     httpd:
-        image: enesgur/php-fpm:7.0-phalcon
+        image: enesgur/php-fpm:7.1-phalcon
         container_name: web-server
         ports:
           - 80:80
