@@ -1,7 +1,7 @@
 version: '2'
 services:
     httpd:
-        image: enesgur/php-fpm:7.2
+        image: enesgur/php-fpm:7.3
         container_name: web-server
         ports:
           - 80:80
@@ -12,6 +12,6 @@ services:
           - ./nginx/sites:/etc/nginx/sites-enabled
           - ./nginx/sites:/etc/nginx/sites-available
           - ./webroot:/var/www/html
-          - ./php/php-fpm.ini:/etc/php/7.2/fpm/php.ini
-          - ./php/php-fpm.conf:/etc/php/7.2/fpm/php-fpm.conf
+          - ./php/php-fpm.ini:/etc/php/7.3/fpm/php.ini
+          - ./php/php-fpm.conf:/etc/php/7.3/fpm/php-fpm.conf
         tty: true
